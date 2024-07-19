@@ -5,10 +5,10 @@ pkgrel=1
 pkgdesc="A transparent DNS-over-SOCKS proxy for use with transparent SOCKS proxies."
 arch=("any")
 makedepends=('git')
-url="http://github.com/jtRIPper/dns-tcp-socks-proxy"
+url="http://github.com/kotvnn/dns-tcp-socks-proxy"
 license=('GPL')
 provides=('dns_proxy' 'tcpdnsproxy.service')
-_gitroot="git://github.com/jtRIPper/dns-tcp-socks-proxy.git"
+_gitroot="git://github.com/kotvnn/dns-tcp-socks-proxy.git"
 _gitname="dns-tcp-socks-proxy"
 
 build() {
