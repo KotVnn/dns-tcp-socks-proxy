@@ -6,6 +6,11 @@ if [ "$(id -u)" -ne "0" ]; then
     exit 1
 fi
 
+# Create user & group for dns_proxy
+echo "Create dnsuser vs dnsgroup for dns_proxy"
+groupadd dnsgroup
+useradd -g dnsgroup -s /bin/false dnsuser
+
 # Move and rename the dns_proxy file
 echo "Moving dns_proxy file to /usr/bin"
 mv ./dns_proxy /usr/bin/
