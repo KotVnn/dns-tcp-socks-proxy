@@ -1,0 +1,13 @@
+[Unit]
+Description=DNS Proxy Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/dns_proxy -c /etc/dns_proxy.conf
+Restart=on-failure
+User=dnsuser
+Group=dnsgroup
+LimitNOFILE=45000
+
+[Install]
+WantedBy=multi-user.target
