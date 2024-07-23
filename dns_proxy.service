@@ -3,10 +3,8 @@ Description=DNS Proxy Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/dns_proxy -c /etc/dns_proxy.conf
+ExecStart=/usr/bin/dns_proxy /etc/dns_proxy.conf
 Restart=on-failure
-User=dnsuser
-Group=dnsgroup
 LimitNOFILE=45000
 
 [Install]
